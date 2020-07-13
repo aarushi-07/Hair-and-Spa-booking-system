@@ -1,0 +1,6 @@
+package com.cts.salon;
+
+public class HairDAO implements Dao<SalonHairDb>{
+	
+
+}

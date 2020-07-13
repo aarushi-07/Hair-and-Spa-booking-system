@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+
+@font-face{
+    font-family: "Margarine";
+    src: url("../resources/font/Margarine-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Abril Fatface";
+    src: url("../resources/font/AbrilFatface-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Mystery Quest";
+    src: url("../resources/font/MysteryQuest-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Nosifer";
+    src: url("../resources/font/Nosifer-Regular.ttf");
+}
+
+.divHead{
+	font-family: "Nosifer";
+}
+.divSer {
+	border: none;
+	text-align: right;
+	font-family: "Abril Fatface";
+	font-size: 22px;
+}
+
+a:link {
+	
+	font-family: "Abril Fatface";
+	font-size: 22px;
+	color: #cc33ff;
+}
+
+a:hover {
+	 color: #002733;
+	
+}
+
+body {
+	background-repeat: no-repeat;
+	 background-color: #ffcccc ;
+}

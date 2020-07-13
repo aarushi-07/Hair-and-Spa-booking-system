@@ -1,0 +1,27 @@
+package com.cts.salon.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.cts.salon.Model.Hair;
+import com.cts.salon.Repository.HairRepository;
+
+public class HairController {
+	
+	@Controller
+	@RequestMapping(path="/hair")
+	public class MainController {
+	  @Autowired 
+	  private HairRepository hairRepository;
+
+
+	  @GetMapping(path="/hair")
+	  public @ResponseBody Iterable<Hair> getAllUsers() {
+	    return hairRepository.findAll();
+	  }
+	}
+
+}

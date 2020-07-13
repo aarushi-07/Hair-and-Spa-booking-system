@@ -1,0 +1,46 @@
+package com.cts.salon.Dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import com.cts.salon.Model.Hair;
+
+import java.sql.*;
+
+@Repository
+public class HairDao {
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+	    this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public JdbcTemplate getJdbcTemplate() {
+	    return jdbcTemplate; 
+	}
+
+	
+	public List<Hair> allservices()
+	{
+		String sql = "SELECT type,price FROM hairstyle";
+		List<Hair> query = jdbcTemplate.query(sql,new RowMapper<Hair>() {
+			
+			@Override
+			public Hair mapRow(ResultSet rs, int arg1) throws SQLException {
+				Hair h = new Hair();
+				h.setType(rs.getString("type"));
+				h.setPrice(rs.getInt("price"));
+				return h;
+			}
+		});
+		
+		return query;
+	}
+}

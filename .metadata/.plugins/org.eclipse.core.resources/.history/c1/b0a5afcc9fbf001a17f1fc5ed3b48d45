@@ -1,0 +1,14 @@
+package com.salon.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class SalonMainController {
+
+	@RequestMapping("/main")
+	public String salonMain() {
+		return "main";
+	}
+
+}

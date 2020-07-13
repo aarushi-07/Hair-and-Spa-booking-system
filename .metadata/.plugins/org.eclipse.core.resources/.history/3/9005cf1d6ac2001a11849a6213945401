@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Main page</title>
+
+<link rel="stylesheet" href="../resources/css/all.css">
+
+<style>
+
+body {
+	background-image: url("../resources/images/bg.jpg");
+	}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: centre;
+}
+
+</style>
+</head>
+<body>
+	<div class="divSer">
+		<a href="checkout">Your Service</a>
+	</div>
+
+	<table >
+
+		<tr>
+			<th><img src="../resources/images/fullstreak.jpg" alt="Hair" width="300" height="300"></th>
+			<th>
+				<div >
+					<p>
+						<a href="hair"> Hair</a>
+					</p>
+				</div>
+			<th>
+		</tr>
+		
+		<tr>
+		<th>
+		<div >
+			<p>
+				<a href="spa"> Spa</a>
+			</p>
+		</div>
+		<th>
+		<th><img src="../resources/images/sp.jpg" alt="Spa" width="300" height="300"></th>
+		
+		</tr>
+	</table>
+
+</body>
+</html>

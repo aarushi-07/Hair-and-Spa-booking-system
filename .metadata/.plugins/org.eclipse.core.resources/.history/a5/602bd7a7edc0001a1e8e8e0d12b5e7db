@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Main page</title>
+
+<link rel="stylesheet" href="../resources/css/all.css">
+
+<style>
+
+table {
+  width: 100%;
+}
+
+body {
+  font-family: "Sofia";
+  font-size: 22px;
+}
+
+a:hover {
+  color: red;
+}
+
+th {
+  text-align: centre;
+}
+
+.div2 {
+	background: url(../resources/images/top.jpg);
+}
+</style>
+</head>
+<body>
+	<div class="divSer">
+		<a href="checkout.jsp">Your Service</a>
+	</div>
+
+	<table >
+
+		<tr>
+			<th><img src="../resources/images/hm.jpg" alt="Hair" width="300" height="300"></th>
+			<th>
+				<div class="div2">
+					<p>
+						<a href="hair"> Hair</a>
+					</p>
+				</div>
+			<th>
+		</tr>
+		
+		<tr>
+		<th>
+		<div class="div3">
+			<p>
+				<a href="spa"> Spa</a>
+			</p>
+		</div>
+		<th>
+		<th><img src="../resources/images/sp.jpg" alt="Spa" width="300" height="300"></th>
+		
+		</tr>
+	</table>
+
+what is this behaviour
+</body>
+</html>

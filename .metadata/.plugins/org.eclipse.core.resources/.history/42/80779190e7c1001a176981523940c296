@@ -1,0 +1,53 @@
+package com.cts.salon.Database;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.SimpleDriverDataSource;
+import org.springframework.stereotype.Repository;
+import java.sql.*;
+
+@Repository
+public class HairDbase {
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	private Statement statement;
+	private Connection con;
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+	    this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public JdbcTemplate getJdbcTemplate() {
+	    return jdbcTemplate; 
+	}
+
+	public HairDbase() throws Exception {
+		System.out.println("Here");
+		try {
+			Class.forName("com.mysql.jdbc.Driver");  
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","aarushi.khush");   
+			statement=con.createStatement();  
+			  
+	}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public ResultSet allValue() {
+        ResultSet rset;
+		try {
+			rset = statement.executeQuery("select * from hairstyle ;");
+			
+			return rset;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(" select"+e);
+			e.printStackTrace();
+			return null;
+		}
+}
+}

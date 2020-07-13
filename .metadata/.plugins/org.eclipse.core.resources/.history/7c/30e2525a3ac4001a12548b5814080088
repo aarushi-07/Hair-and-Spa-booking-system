@@ -1,0 +1,144 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Book Now</title>
+<link rel="stylesheet" href="../resources/css/all.css" />
+
+<script>
+	function myFunction() {
+		confirm("Press ok to book a appointment");
+		window.location.href = "confirmation";
+
+	}
+</script>
+
+<style>
+@font-face {
+	font-family: "Flamenco";
+	src: url("../resources/font/Flamenco-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Abril Fatface";
+	src: url("../resources/font/AbrilFatface-Regular.ttf");
+}
+
+table {
+	margin-top: 60px;
+	font-size: 30px;
+}
+
+th, td {
+	padding: 15px;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+</style>
+</head>
+<body>
+	<div class="divSer">
+		<a href="salon">Main</a>
+	</div>
+
+
+	<form>
+
+		<img src="../resources/images/h.jpg" width=70% height=80%>
+		<div class="centered">
+
+			<table class="flamenco">
+				<caption>Make Your Selection</caption>
+				<tr>
+					<td>Haircut:</td>
+					<td></td>
+					<td></td>
+					<td><select id="haircut" name="haircut"
+						onclick="calculateTotal())">
+							<option value=0>None</option>
+							<c:forEach items="${style}" var="s">
+								<option value="${s.price}">${s.type}</option>
+							</c:forEach>
+					</select></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Hair Color:</td>
+					<td></td>
+					<td></td>
+					<td><select id="haircolor" name="haircolor"
+						onclick="calculateTotal()">
+							<option value=0>None</option>
+							<c:forEach items="${color}" var="c">
+								<option value="${c.price}">${c.type}</option>
+							</c:forEach>
+					</select></td>
+
+				</tr>
+
+				<tr>
+					<td>Spa:</td>
+					<td></td>
+					<td></td>
+					<td><select id="spa" name="spa"
+						onclick="calculateTotal()">
+							<option value=0>None</option>
+							<c:forEach items="${spas}" var="s">
+								<option value="${s.price}">${s.type}</option>
+							</c:forEach>
+					</select></td>
+
+				</tr>
+				<tr>
+					<td>Date:</td>
+					<td></td>
+					<td></td>
+					<td><input type="date" id="reservation" name="reservation"></td>
+
+				</tr>
+				<tr>
+					<td>Time:</td>
+					<td></td>
+					<td></td>
+					<td><input type="time" id="appointment" name="appointment"></td>
+					<td>(eg.02:30:pm)</td>
+				</tr>
+
+				<tr>
+					<td>Total Amount:</td>
+					<td><input id="totalPrice" readonly></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Submit" onclick="myFunction()"></td>
+				</tr>
+			</table>
+
+		</div>
+	</form>
+
+	<script>
+	function getTotal()
+	{
+		var h=document.getElementById("haircut").value;  
+		var c=document.getElementById("hiarcolor").value; 
+		var s=document.getElementById("spa").value; 
+
+		var total=h+s+c;
+	    //display the result
+	    document.getElementById('totalPrice').innerHTML =total;
+
+	}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.cts.salon.Dao;
+
+public class AppointmentDao {
+
+}

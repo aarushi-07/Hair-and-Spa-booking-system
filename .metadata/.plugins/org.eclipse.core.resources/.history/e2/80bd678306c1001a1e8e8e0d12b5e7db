@@ -1,0 +1,28 @@
+package com.cts.salon;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class SalonController {
+
+	
+	@RequestMapping("/salon")
+	public String Salon()
+	{
+		return "salon";
+	}
+	
+	@RequestMapping("/hair")
+	public String Hair()
+	{
+		return "hair";
+	}
+	
+	@RequestMapping("/spa")
+	public String Spa()
+	{
+		return "spa";
+	}
+	
+}

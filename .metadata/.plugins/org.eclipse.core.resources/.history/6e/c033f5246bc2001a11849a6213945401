@@ -1,0 +1,76 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Main page</title>
+
+<link rel="stylesheet" href="../resources/css/all.css" />
+
+<style>
+
+@font-face{
+    font-family: "Nosifer";
+    src: url("../resources/font/Nosifer-Regular.ttf");
+}
+
+.nosifer {
+font-family: "Nosifer";
+}
+
+.bg {
+	background-image: url("../resources/images/j.jpg");
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	repeat: no-repeat;
+	}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: centre;
+}
+
+</style>
+</head>
+<body>
+	<div class="divSer bg">
+		<a href="checkout">Your Service</a>
+	</div>
+	
+	<div class=divHead>
+	HAIR AND SPA SALON
+	</div>
+
+	<table >
+
+		<tr>
+			<th><img src="../resources/images/fullstreak.jpg" alt="Hair" width="300" height="300"></th>
+			<th>
+				<div >
+					<p>
+						<a href="hair"> Hair</a>
+					</p>
+				</div>
+			<th>
+		</tr>
+		
+		<tr>
+		<th>
+		<div >
+			<p>
+				<a href="spa"> Spa</a>
+			</p>
+		</div>
+		<th>
+		<th><img src="../resources/images/sp.jpg" alt="Spa" width="300" height="300"></th>
+		
+		</tr>
+	</table>
+
+</body>
+</html>

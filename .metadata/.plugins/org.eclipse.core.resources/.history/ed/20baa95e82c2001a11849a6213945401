@@ -1,0 +1,68 @@
+@charset "ISO-8859-1";
+
+@font-face{
+    font-family: "Margarine";
+    src: url("../resources/font/Margarine-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Abril Fatface";
+    src: url("../resources/font/AbrilFatface-Regular.ttf");
+}
+
+
+@font-face{
+    font-family: "Nosifer";
+    src: url("../resources/font/Nosifer-Regular.ttf");
+}
+
+.nosifer{
+	font-family: "Nosifer";
+	text-align: center;
+}
+
+.abril {
+	font-family: 'Abril Fatface';
+}
+
+
+.margarine {
+	font-family: "Margarine";
+}
+
+.divSer {
+	border: none;
+	text-align: right;
+	font-family: "Abril Fatface";
+	font-size: 22px;
+}
+
+a:link {
+	text-decoration: none;
+	font-family: "Abril Fatface";
+	font-size: 22px;
+	color: #740685;
+}
+
+a:hover {
+	 color: #002733;
+	
+}
+
+body {
+	 background-color: #ffcccc ;
+}
+
+.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centeredHair {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}

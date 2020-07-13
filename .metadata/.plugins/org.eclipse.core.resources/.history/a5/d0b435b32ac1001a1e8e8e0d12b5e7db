@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+.divSer {
+	border: none;
+	text-align: right;
+	font-family: "Sofia";
+	font-size: 22px;
+}
+
+a:link {
+	text-decoration: none;
+	<%-- font-family: "Sofia"; --%>
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 22px;
+	color: #cc33ff;
+}
+
+a:hover {
+	 color: #002733;
+	
+}
+
+body {
+	background-image: url("../resources/images/1.jpg");
+	background-repeat: no-repeat;
+	 background-color: #ffcccc 
+}

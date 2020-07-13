@@ -1,0 +1,10 @@
+package com.cts.salon.Repository;
+import org.springframework.data.repository.CrudRepository;
+
+import com.cts.salon.SalonHairDb;
+
+
+
+public interface HairRepository extends CrudRepository<SalonHairDb, Long>{
+
+}

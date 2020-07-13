@@ -1,0 +1,81 @@
+package com.cts.salon.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.cts.salon.Dao.FacilityDao;
+import com.cts.salon.Model.Facility;
+
+
+
+@Controller
+public class SalonController {
+
+	@Autowired
+	private FacilityDao hairDao;
+	
+	
+	@RequestMapping("/salon")
+	public String Salon()
+	{
+		return "salon";
+	}
+	
+	@RequestMapping("/hair")
+	public String Hair(Model model)
+	{
+		List<Facility> members = hairDao.allservices();
+		List<Facility> mem = hairDao.allservicesColor();
+		model.addAttribute("style",members);
+		model.addAttribute("color",mem);
+		return "hair";
+	}
+	
+	@RequestMapping("/checkout")
+	public String Hairs(Model model)
+	{
+		List<Facility> members = hairDao.allservicesCheckout();
+		List<Facility> mem = hairDao.allservicesColorCheckout();
+		List<Facility> mems = hairDao.allservicesSpa();
+		model.addAttribute("spas",mems);
+		model.addAttribute("style",members);
+		model.addAttribute("color",mem);
+		return "checkout";
+	}
+	
+	
+	
+	@RequestMapping("/spa")
+	public String Spa(Model model)
+	{
+		List<Facility> mem = hairDao.allservicesSpa();
+		model.addAttribute("spas",mem);
+		return "spa";
+	}
+	
+	@RequestMapping("/confirmation")
+	public String con()
+	{
+		return "confirmation";
+		
+	}
+	
+	@RequestMapping("/login")
+	public String Login()
+	{
+		return "login";
+		
+	}
+	
+	@RequestMapping("/registration")
+	public String Registration()
+	{
+		return "registration";
+		
+	}
+	
+}

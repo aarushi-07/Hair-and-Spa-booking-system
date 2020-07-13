@@ -1,0 +1,25 @@
+1594116749890	Rename resource 'Test.java'
+1594116843476	Rename resource 'test.java'
+1594116911770	Delete element
+1594118538870	Delete element
+1594118568424	Delete element
+1594119000309	Delete element
+1594203733094	Delete element
+1594203946319	Delete element
+1594211593891	Rename type 'SalonHair'
+1594216307386	Delete element
+1594216318466	Delete element
+1594219679808	Delete element
+1594230343935	Rename compilation unit 'SalonRepository.java'
+1594275239908	Delete element
+1594276041287	Rename type 'SalonHairDb'
+1594276205818	Rename type 'SalonHairModel'
+1594276247293	Delete element
+1594276529823	Rename type 'HairModel'
+1594277068067	Delete element
+1594296418529	Rename type 'Dbase'
+1594303950310	Rename package 'com.cts.salon.Database'
+1594303978660	Rename type 'HairDbase'
+1594305265451	Delete element
+1594305331735	Rename type 'Hair'
+1594305348488	Rename type 'HairDao'

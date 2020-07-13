@@ -1,0 +1,40 @@
+package com.cts.salon.Model;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Hair {
+	
+	private String type;
+	private int price;
+	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public Hair(String type, int price) {
+		super();
+		this.type = type;
+		this.price = price;
+	}
+	public Hair()
+	{
+	}
+	
+	@Override
+	public String toString() {
+		return "SalonHair [type=" + type + ", price=" + price + "]";
+	}
+
+
+}

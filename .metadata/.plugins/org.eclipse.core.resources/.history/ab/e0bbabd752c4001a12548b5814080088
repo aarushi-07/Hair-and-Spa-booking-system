@@ -1,0 +1,5 @@
+package com.cts.salon.Model;
+
+public class Appointment {
+
+}
